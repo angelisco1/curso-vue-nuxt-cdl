@@ -27,7 +27,9 @@
       </div>
     </Card> -->
     <!-- <Filtros /> -->
-    <Formularios />
+    <!-- <Formularios /> -->
+    <!-- <Dinamicos /> -->
+    <CmpRouting />
   </div>
 </template>
 
@@ -42,6 +44,8 @@ import { EventBus } from '@/main';
 import Ejercicio from '@/components/ejercicio-cv/Ejercicio.vue';
 import Filtros from '@/components/Filtros.vue';
 import Formularios from '@/components/Formularios.vue';
+import Dinamicos from '@/components/Dinamicos.vue';
+import CmpRouting from '@/components/Rutas/CmpRouting.vue';
 
 export default {
   components: {
@@ -55,6 +59,8 @@ export default {
     Card,
     Filtros,
     Formularios,
+    Dinamicos,
+    CmpRouting,
   },
   data() {
     return {

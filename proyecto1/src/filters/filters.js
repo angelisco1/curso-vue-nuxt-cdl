@@ -1,5 +1,8 @@
 import Vue from 'vue';
 
+// https://vimeo.com/78874763
+// https://www.youtube.com/watch?v=BKorP55Aqvg&feature=youtu.be
+
 Vue.filter('slice', (val, start, end) => {
   if (end) {
     return val.slice(start, end)
