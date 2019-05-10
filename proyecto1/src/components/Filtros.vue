@@ -12,6 +12,9 @@
       <!-- <li v-for="(color, pos) in colores | filtro('r')" :key="pos">{{color}}</li> -->
       <li v-for="(color, pos) in coloresFiltrados" :key="pos">{{color}}</li>
     </ul>
+    <p>{{ 'Hola mundo' | reverse }}</p>
+    <p>{{ 'No llevare corona, no alcanzare la gloria. Vivire y morire en mi puesto. Soy la espada en la oscuridad. Soy el vigilante del Muro. Soy el fuego que arde contra…​' | hide(['no', 'morire']) }}</p>
+    <p>{{ 'No llevare corona, no alcanzare la gloria. Vivire y morire en mi puesto. Soy la espada en la oscuridad. Soy el vigilante del Muro. Soy el fuego que arde contra…​' | hide(['no', 'morire'], '-') }}</p>
   </div>
 </template>
 

@@ -26,7 +26,8 @@
         <hr>
       </div>
     </Card> -->
-    <Filtros />
+    <!-- <Filtros /> -->
+    <Formularios />
   </div>
 </template>
 
@@ -40,6 +41,7 @@ import Card from '@/components/Card.vue';
 import { EventBus } from '@/main';
 import Ejercicio from '@/components/ejercicio-cv/Ejercicio.vue';
 import Filtros from '@/components/Filtros.vue';
+import Formularios from '@/components/Formularios.vue';
 
 export default {
   components: {
@@ -52,6 +54,7 @@ export default {
     Ejercicio,
     Card,
     Filtros,
+    Formularios,
   },
   data() {
     return {

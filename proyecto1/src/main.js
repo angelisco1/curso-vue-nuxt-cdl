@@ -1,22 +1,25 @@
 import Vue from 'vue'
 import App from './App.vue'
 import '@/assets/styles/animate.css';
+import VeeValidate, { Validator } from 'vee-validate';
 
 Vue.config.productionTip = false
 
 // Aquí cosas globales (componentes, filtros...)
-import '@/directivas/hover.js';
-import '@/directivas/powermode.js';
+import '@/directivas/hover';
+import '@/directivas/powermode';
+import '@/filters/filters';
 
-Vue.filter('slice', (val, start, end) => {
-  if (end) {
-    return val.slice(start, end)
-  } else {
-    if (start) {
-      return val.slice(start);
-    }
+
+Vue.use(VeeValidate);
+
+Validator.extend('esStark', {
+  getMessage(campo) {
+    return 'No es Stark';
+  },
+  validate(campo) {
+    return ['arya', 'sansa', 'rickon', 'robb', 'bran', 'tony'].includes(campo);
   }
-  return val;
 });
 
 export const EventBus = new Vue({
