@@ -29,7 +29,8 @@
     <!-- <Filtros /> -->
     <!-- <Formularios /> -->
     <!-- <Dinamicos /> -->
-    <CmpRouting />
+    <!-- <CmpRouting /> -->
+    <Http />
   </div>
 </template>
 
@@ -46,6 +47,7 @@ import Filtros from '@/components/Filtros.vue';
 import Formularios from '@/components/Formularios.vue';
 import Dinamicos from '@/components/Dinamicos.vue';
 import CmpRouting from '@/components/Rutas/CmpRouting.vue';
+import Http from '@/components/Http.vue';
 
 export default {
   components: {
@@ -61,6 +63,7 @@ export default {
     Formularios,
     Dinamicos,
     CmpRouting,
+    Http
   },
   data() {
     return {

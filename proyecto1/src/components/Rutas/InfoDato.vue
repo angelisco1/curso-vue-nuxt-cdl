@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  props: ['id']
+  props: ['id'],
+  beforeRouteEnter(to, from, next) {
+    next(confirm('Estas logueado??'));
+  },
+  beforeRouteUpdate(to, from, next) {
+    next(confirm('Estas logueado y tienes permisos para ver la info??'));
+  }
   // data() {
   //   return {
   //     id: ''
