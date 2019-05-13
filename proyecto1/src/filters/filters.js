@@ -29,3 +29,7 @@ Vue.filter('hide', (value, ocultar, caracter) => {
   }
   return res;
 })
+
+Vue.filter('preview', (value) => {
+  return value.slice(0, 20) + '...'
+})

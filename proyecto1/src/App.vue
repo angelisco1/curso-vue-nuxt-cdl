@@ -30,7 +30,8 @@
     <!-- <Formularios /> -->
     <!-- <Dinamicos /> -->
     <!-- <CmpRouting /> -->
-    <Http />
+    <!-- <Http /> -->
+    <EjercicioIcndb />
   </div>
 </template>
 
@@ -48,6 +49,7 @@ import Formularios from '@/components/Formularios.vue';
 import Dinamicos from '@/components/Dinamicos.vue';
 import CmpRouting from '@/components/Rutas/CmpRouting.vue';
 import Http from '@/components/Http.vue';
+import EjercicioIcndb from '@/components/EjercicioIcndb/EjercicioIcndb.vue';
 
 export default {
   components: {
@@ -63,7 +65,8 @@ export default {
     Formularios,
     Dinamicos,
     CmpRouting,
-    Http
+    Http,
+    EjercicioIcndb
   },
   data() {
     return {
