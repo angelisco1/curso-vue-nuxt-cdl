@@ -25,6 +25,7 @@ export default {
   methods: {
     ...mapActions(['setValor']),
     mostrarValor() {
+      console.log(process.env.URL);
       console.log('El valor es ' + this.valor);
     }
   }
