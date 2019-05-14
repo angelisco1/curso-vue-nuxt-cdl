@@ -1,5 +1,8 @@
 import axios from 'axios';
-const URL = 'https://todo-list-603ba.firebaseio.com/tareas-vuex/angel';
+import config from '@/config';
+
+// const URL = 'https://todo-list-603ba.firebaseio.com/tareas-vuex/angel';
+const URL = config.FB_URL
 
 const state = {
   tareas: [],
@@ -20,6 +23,9 @@ const getters = {
     return (id) => {
       return state.tareas.find(t => t.id === id);
     }
+  },
+  filtro(state) {
+    return state.filtro;
   }
 }
 
@@ -40,6 +46,9 @@ const mutations = {
   },
   deleteTarea(state, payload) {
     state.tareas = state.tareas.filter(t => t.id !== payload);
+  },
+  setFiltro(state, payload) {
+    state.filtro = payload;
   }
 }
 
@@ -81,6 +90,9 @@ const actions = {
       .then(() => {
         context.commit('updateTarea', payload);
       })
+  },
+  setFiltro(context, payload) {
+    context.commit('setFiltro', payload);
   }
 }
 
