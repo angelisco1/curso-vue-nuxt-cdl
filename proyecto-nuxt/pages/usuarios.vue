@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Titulo titulo="Inicio" />
+    <Titulo titulo="Usuarios" />
+    <nuxt-child></nuxt-child>
   </div>
 </template>
 
@@ -10,7 +11,6 @@
 export default {
   // components: {
   //   Titulo
-  // },
-  layout: 'mi-layout'
+  // }
 }
 </script>

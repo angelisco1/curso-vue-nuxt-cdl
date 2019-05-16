@@ -33,13 +33,20 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/componentes-globales.js',
+    '~/plugins/filtros.js',
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+
+  },
 
   /*
   ** Build configuration

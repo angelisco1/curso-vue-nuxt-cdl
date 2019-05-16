@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Titulo titulo="Usuarios" />
+    <!-- <Titulo titulo="Usuarios" /> -->
   </div>
 </template>
 
 <script>
-import Titulo from '~/components/Titulo.vue';
+// import Titulo from '~/components/Titulo.vue';
 
-export default {
-  components: {
-    Titulo
-  }
-}
+// export default {
+//   components: {
+//     Titulo
+//   }
+// }
 </script>
