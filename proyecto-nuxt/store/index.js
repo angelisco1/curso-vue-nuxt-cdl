@@ -26,12 +26,12 @@ export const actions = {
     context.commit('initOfertas', payload);
   },
   nuxtServerInit(context) {
-    const URL = 'https://fluentjobs-fa22e.firebaseio.com/trabajos.json';
-    console.log(this.$axios)
+    // const URL = 'https://fluentjobs-fa22e.firebaseio.com/trabajos.json';
+    // console.log(this.$axios)
     return new Promise((resolve, reject) => {
-      return this.$axios.$get(URL)
+      return this.$axios.$get('.json')
       .then(resp => {
-          console.log(resp);
+          // console.log(resp);
           const ofertas = [];
           for (let id in resp) {
             ofertas.push(Object.assign({}, resp[id], {id: id}));

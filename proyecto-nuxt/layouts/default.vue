@@ -11,7 +11,9 @@ import Header from '@/components/Header';
 export default {
   components: {
     Header
-  }
+  },
+  // middleware: 'log'
+  middleware: ['log', 'auth']
 }
 </script>
 

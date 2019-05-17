@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 
 export default {
   data() {
@@ -20,15 +20,18 @@ export default {
     }
   },
   asyncData(context) {
-    console.log(context.params.ofertaId);
+    // console.log(context.params.ofertaId);
     const id = context.params.ofertaId;
-    const URL = `https://fluentjobs-fa22e.firebaseio.com/trabajos/${id}.json`;
+    // const URL = `https://fluentjobs-fa22e.firebaseio.com/trabajos/${id}.json`;
     return new Promise((resolve, reject) => {
-      axios.get(URL)
+      context.$axios.$get(`${id}.json`)
         .then(resp => {
-          resolve({oferta: resp.data})
+          console.log('RESPUESTA_GET', resp);
+          resolve({oferta: resp})
+          // reject(new Error('Un error'))
         })
     })
+    .catch(err => context.error(err))
   }
 }
 </script>

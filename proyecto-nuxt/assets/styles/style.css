@@ -1,0 +1,12 @@
+header > nav > ul > li {
+  list-style: none;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: url('~assets/images/fondo.jpg');
+}

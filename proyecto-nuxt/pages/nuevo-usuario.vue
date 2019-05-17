@@ -16,6 +16,9 @@ export default {
     guardar() {
       this.$router.push('/usuarios');
     }
-  }
+  },
+  // head: {
+
+  // }
 }
 </script>

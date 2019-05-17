@@ -20,6 +20,13 @@ export default {
   //   }
   // },
   computed: mapGetters({ofertas: 'ofertas'}),
+  asyncData(context) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('ya')
+      }, 2500);
+    })
+  },
   // fetch(context) {
     // const URL = 'https://fluentjobs-fa22e.firebaseio.com/trabajos.json';
     // return new Promise((resolve, reject) => {
@@ -58,7 +65,6 @@ export default {
   // created() {
   //   this.$store.dispatch('initOfertas', this.ofertas)
   // }
-
   // created() {
   //   const URL = 'https://fluentjobs-fa22e.firebaseio.com/trabajos.json';
   //   axios.get(URL)
